@@ -10,7 +10,6 @@ import java.util.List;
 @ApplicationScoped
 public class CourseService {
 
-//    @Inject
     private CourseDao dao;
 
     @Inject
