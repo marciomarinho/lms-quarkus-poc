@@ -10,13 +10,13 @@ import java.util.List;
 @ApplicationScoped
 public class CourseService {
 
-    @Inject
-    CourseDao dao;
-
 //    @Inject
-//    public CourseService(CourseDao courseDao) {
-//        this.dao = courseDao;
-//    }
+    private CourseDao dao;
+
+    @Inject
+    public CourseService(CourseDao courseDao) {
+        this.dao = courseDao;
+    }
 
     public void save(Course course) {
         dao.update(course);

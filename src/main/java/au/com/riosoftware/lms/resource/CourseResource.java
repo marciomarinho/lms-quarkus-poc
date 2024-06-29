@@ -14,12 +14,12 @@ import java.util.stream.Collectors;
 @Consumes(MediaType.APPLICATION_JSON)
 public class CourseResource {
 
-    @Inject
-    CourseService courseService;
+    private CourseService courseService;
 
-//    public CourseResource(CourseService courseService) {
-//        this.courseService = courseService;
-//    }
+    @Inject
+    public CourseResource(CourseService courseService) {
+        this.courseService = courseService;
+    }
 
     @GET
     public List<CourseDto> getAll() {
